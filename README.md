@@ -1,2 +1,2 @@
 # Typescript_learn
-typescript beginner
+typescript beginner-learning process
