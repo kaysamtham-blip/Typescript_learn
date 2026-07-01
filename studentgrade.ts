@@ -5,7 +5,7 @@ return a + b;
     
 const max = (c:number,d:number)：number => 
 if(c>d) {
-return c;}
+(return c;}
 else {
 return d;}
 
@@ -20,6 +20,15 @@ return "B";
 else {
 return "A";
 }
+
+const announceGrade(name:string="Chewy", marks:number=79):void => {
+result=calcgrade(79);
+console.log("student" + name + "score " + marks + " and have grade " + result + ".")
+ if(result == "C"){
+ console.warn("You have to improve!");
+ }
+}
+
 const studentGreeting = (name:string,title?:string):string => {return "Hello" + title + " " + name ;}
 
 //call out all function
@@ -45,3 +54,8 @@ console.warn("You have to improve!");
  ...
  ...
  }
+
+(line25)
+ #define result first before using
+ #no need to mention 79 in parameters bcs already initialize inside at the start
+ const result=calcgrade(marks)
