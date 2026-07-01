@@ -12,3 +12,18 @@ typescript beginner-learning process
 - console.xx() not console.xx = 
 - ; is not mandatory in typescript
 - position of {} matters the formatting for typescript
+
+30/6:
+(continuation from 29/6)
+- 3 type of functions
+- normal:
+ function grade(name:string,marks:number):string{...(return output)...}
+ - normal with value given in parameters:
+  function grade(name:string=Ali,marks:number=90):string{...(return output)}
+- arrow function:
+ const grade = (name:string. marks:number):string => {..(return output)...}
+- void function
+ function grade const grade = (name:string, marks:number):string / => {...(only output but no return output)...}
+
+returned output: raw output that can be manipulated after printed
+no returned output: output that is finalized, all operation settled in the function
