@@ -28,6 +28,7 @@ typescript beginner-learning process
  no returned output: output that is finalized, all operation settled in the function
 
 4/7:
+- define NOT with !
 - define OR in type use |
 - define OR in logic (if condition) use ||
 - define AND in logic use &&
