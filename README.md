@@ -24,6 +24,5 @@ typescript beginner-learning process
  const grade = (name:string. marks:number):string => {..(return output)...}
 - void function
  function grade const grade = (name:string, marks:number):string / => {...(only output but no return output)...}
-
-returned output: raw output that can be manipulated after printed
-no returned output: output that is finalized, all operation settled in the function
+- returned output: raw output that can be manipulated after printed
+ no returned output: output that is finalized, all operation settled in the function
