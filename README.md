@@ -32,3 +32,6 @@ typescript beginner-learning process
 - define OR in logic (if condition) use ||
 - define AND in logic use &&
 - combine use & (intersection operator)
+- typeof help us and computer to verify the type of variables
+ Eg: if(typeof input === "string")  console.log()....
+     const cat = "meow";   console.log(typeof cat)
