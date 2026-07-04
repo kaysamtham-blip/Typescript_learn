@@ -26,3 +26,9 @@ typescript beginner-learning process
  function grade const grade = (name:string, marks:number):string / => {...(only output but no return output)...}
 - returned output: raw output that can be manipulated after printed
  no returned output: output that is finalized, all operation settled in the function
+
+4/7:
+- define OR in type use |
+- define OR in logic (if condition) use ||
+- define AND in logic use &&
+- combine use & (intersection operator)
