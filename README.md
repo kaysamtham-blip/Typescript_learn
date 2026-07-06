@@ -36,3 +36,12 @@ typescript beginner-learning process
 - typeof help us and computer to verify the type of variables
  Eg: if(typeof input === "string")  console.log()....
      const cat = "meow";   console.log(typeof cat)
+
+5/7:
+- interface: a premise or background for a coding, not really a content of coding. Just building structure to define different group of objects
+ interface words  {alphabet:string; noAlphabet:number}
+- type: use to set and define rules, include type, interfaces,union (combination) and specific value/data. Once disobey in coding will be warned
+ type word = string/words/(words|numbers)/"kangaroo"
+- add parameter name for variables inside function bcs under function, we use "item" as parameter to represent the interfaces so variables under the function should add "item."
+ function (item:string) {
+(if item.word == "peace") {console.log(....)}
