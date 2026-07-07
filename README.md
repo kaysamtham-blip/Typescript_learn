@@ -45,3 +45,9 @@ typescript beginner-learning process
 - add parameter name for variables inside function bcs under function, we use "item" as parameter to represent the interfaces so variables under the function should add "item."
  function (item:string) {
 (if item.word == "peace") {console.log(....)}
+
+7/7:
+- interface no need to write const when created those variables
+- [in] operator: variable checked must put "" as [in] define only string format
+- [readonly] operator: standardize the value of certain variable, if value of variable change, error occur
+ - readonly grav: number=9.82;  grav=10 => error occur
