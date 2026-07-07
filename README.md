@@ -51,3 +51,7 @@ typescript beginner-learning process
 - [in] operator: variable checked must put "" as [in] define only string format
 - [readonly] operator: standardize the value of certain variable, if value of variable change, error occur
  - readonly grav: number=9.82;  grav=10 => error occur
+- [?] operator: used to show optional data, can be no value for that variable
+- [unknown] vs [any] operator:
+ -[unknown]: not clarified type when setting but have to clarify afterwards in the code before the output is processed
+ -[any]: not clarified type for variables, can be any type, flexible to change data in any time. Compiler won't enforced type rules, no properties and suggestions given
