@@ -20,5 +20,7 @@ const handleCargo(item:unknown ) => {
   else {
   "Processing package " + trackingno + "with weight: unknown")
   }
+ }
  else if("machineID" && "priority" in item) {
  console.log("Fixing machine " + item.machineID +"with priority: " + item.priority+ ".")
+ }
