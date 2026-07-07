@@ -7,7 +7,7 @@ destination: string;
 interface MaintenanceTask {
 readonly machineID: string;
 priority: string;
- estimatedHours: number;
+estimatedHours: number;
 }
 
 type cargo = Package|MaintnanceTask;
@@ -24,3 +24,4 @@ const handleCargo(item:unknown ) => {
  else if("machineID" && "priority" in item) {
  console.log("Fixing machine " + item.machineID +"with priority: " + item.priority+ ".")
  }
+}
