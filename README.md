@@ -1,6 +1,33 @@
 # Typescript_learn
 typescript beginner-learning process
 
+【1. Primitive Types (The "Single Values")
+These are the basic building blocks.
+ ⁠string⁠: Text (e.g., ⁠"Hello"⁠).
+ ⁠number⁠: Any number (integers or decimals).
+ ⁠boolean⁠: ⁠true⁠ or ⁠false⁠.
+ ⁠bigint⁠: Very large integers.
+ ⁠symbol⁠: Unique identifiers.
+ ⁠null⁠: Intentional empty value.
+ ⁠undefined⁠: The "default" state of nothingness.
+2. Object Types (The "Containers")
+These are all the things that hold more than one value, or have properties.
+ Objects & Interfaces: (Like your ⁠Package⁠ and ⁠MaintenanceTask⁠).
+ Arrays: ⁠string[]⁠ or ⁠number[]⁠ (they are a special type of object).
+ Functions: ⁠(a: number) => number⁠.
+3. The "TypeScript Special" Types
+These are types that only exist in TypeScript to help you manage your code during development:
+ ⁠any⁠: The "turn off safety" type (we discussed why this is dangerous).
+ ⁠unknown⁠: The "safe" version of ⁠any⁠ (the one that forces you to use ⁠typeof⁠ and ⁠in⁠).
+ ⁠void⁠: Used for functions that do not ⁠return⁠ anything.
+ ⁠never⁠: Used for functions that never finish (e.g., a function that always throws an error or runs forever).
+ ⁠literal types⁠: You can restrict a type to a specific value, like ⁠let direction: "left" | "right";⁠
+
+Enums: A way to give friendly names to a set of numbers (e.g., ⁠Status.Pending⁠).
+Tuples: Arrays with a fixed number of items where each position has a specific type (e.g., ⁠[string, number]⁠).】
+
+
+
 27/6:
 - define variable: const/let
 - conduct an action: console.log/warn/error..
@@ -55,3 +82,12 @@ typescript beginner-learning process
 - [unknown] vs [any] operator:
  -[unknown]: not clarified type when setting but have to clarify afterwards in the code before the output is processed
  -[any]: not clarified type for variables, can be any type, flexible to change data in any time. Compiler won't enforced type rules, no properties and suggestions given
+
+8/7:
+- In function, with vs without parameters:
+ - with parameters: can insert new variables every time to operate the function and give different result based on parameters entered
+ - without parameters: same output runs out everytime, function can independantly operate without input inserted
+- [as] operator: notify and declare to compiler document
+ - if("trackingno" in item ) {..}
+   const isPackage = item as Package；
+   console.log(isPackage.item)
