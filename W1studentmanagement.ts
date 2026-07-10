@@ -6,30 +6,31 @@ interface student {
   title?: string;
 }
 
-const s1:student = {name:Wini, id:253, scores:(58,76,85), isEnrolled:true}
-const s2:student = {name:alpha, id:432, scores:(73,83,75), isEnrolled:true}
-const s3:student = {name:piggie, id:229, scores:(828,90,45), isEnrolled:false}
+const s1:student = {name:Wini, id:253, scores:[58,76,85], isEnrolled:true}
+const s2:student = {name:alpha, id:432, scores:[73,83,75], isEnrolled:true}
+const s3:student = {name:piggie, id:229, scores:[828,90,45], isEnrolled:false}
 
-const average = (scores[]) => {
+const average = (scores:number[]) => {
   return (scores[0], scores[1], scores[2])/3;
 }
 
-const result[] = average(scores[])
-                 
-if(result >== 80) {
+const calcgrade = (ave:number) => {                
+if(ave >= 80) {
   grade = "A"
 }
-else if(result >=60) {
+else if(ave >= 60) {
   grade = "B"
 }
-else if(result >=50) {
+else if(ave >= 50) {
   grade = "C"
 }
 else {
   grade = "fail"
 }
 
-function report(detail:student[]): string {
+function report(detail:student): string {
+const ave = average(detail.scores)
+const grade = calcgrade(ave)
   console.log("Name: " + detail.name + " | ID: " + detail.id + " | Average: " + result[])
   if (grade==="C" || grade =="fail") {
     console.warn("Study smart!")
