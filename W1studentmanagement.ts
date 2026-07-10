@@ -15,6 +15,7 @@ const average = (scores:number[]) => {
 }
 
 const calcgrade = (ave:number) => {                
+let grade:string
 if(ave >= 80) {
   grade = "A"
 }
@@ -26,13 +27,15 @@ else if(ave >= 50) {
 }
 else {
   grade = "fail"
+
+return grade
 }
 
-function report(detail:student): string {
+function report(detail:student): void {
 const ave = average(detail.scores)
 const grade = calcgrade(ave)
-  console.log("Name: " + detail.name + " | ID: " + detail.id + " | Average: " + result[])
-  if (grade==="C" || grade =="fail") {
+  console.log("Name: " + detail.name + " | ID: " + detail.id + " | Average: " + ave)
+  if (grade==="C" || grade ==="fail") {
     console.warn("Study smart!")
   }
   if(isEnrolled===false) {
@@ -45,8 +48,8 @@ report(s2);
 report(s3);
 
 function wrapArray <T>(cincai): T[] {
-  return [cincai]
   console.log([cincai])
+  return [cincai]
 }
 
 wrapArray("hahaha");
