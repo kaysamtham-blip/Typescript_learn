@@ -66,4 +66,7 @@ const findmax = (ave: result[]): string => {
   }
 }
 
+const findmax = (detail.student[]):void => {
+ const
+
 console.log("Top student is " + highest + ".")
