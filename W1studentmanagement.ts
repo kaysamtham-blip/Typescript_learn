@@ -11,7 +11,7 @@ const s2:student = {name:"Alpha", id:432, scores:[73,83,75], isEnrolled:true}
 const s3:student = {name:"Piggie", id:229, scores:[828,90,45], isEnrolled:false}
 
 const average = (scores:number[]) => {
-  return (scores[0], scores[1], scores[2])/3;
+  return (scores[0] + scores[1] + scores[2])/3;
 }
 
 const calcgrade = (ave:number) => {                
@@ -27,7 +27,7 @@ else if(ave >= 50) {
 }
 else {
   grade = "fail"
-
+}
 return grade
 }
 
@@ -38,7 +38,7 @@ const grade = calcgrade(ave)
   if (grade==="C" || grade ==="fail") {
     console.warn("Study smart!")
   }
-  if(isEnrolled===false) {
+  if(detail..isEnrolled===false) {
     console.error("This student miss the exam.")
   }
 } 
@@ -47,7 +47,7 @@ report(s1);
 report(s2);
 report(s3);
 
-function wrapArray <T>(cincai): T[] {
+function wrapArray <T>(cincai:T): T[] {
   console.log([cincai])
   return [cincai]
 }
@@ -56,13 +56,15 @@ wrapArray("hahaha");
 wrapArray(207);
 wrapArray(false);
 
-const findmax = (detail.student[]):void => {
- const topave = average(detail.scores[0])
+const findmax = (detail:(student[]):void => {
+ let topave = average(detail.scores[0])
+ let top = student.name[0]
  for(i=0; i<=detail.length; i++) {
    const ave = average(detail.scores[i])
    if(ave > topave) {
      topave = ave
+     top = student.name[i]
    }
   }
- console.log("Top student is " + topave + ".")
+ console.log("Top student is " + top + ".")
 }
