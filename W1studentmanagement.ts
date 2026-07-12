@@ -66,5 +66,3 @@ const findmax = (detail.student[]):void => {
   }
  console.log("Top student is " + topave + ".")
 }
-
-console.log("Top student is " + highest + ".")
