@@ -38,7 +38,7 @@ const grade = calcgrade(ave)
   if (grade==="C" || grade ==="fail") {
     console.warn("Study smart!")
   }
-  if(detail..isEnrolled===false) {
+  if(detail.isEnrolled===false) {
     console.error("This student miss the exam.")
   }
 } 
