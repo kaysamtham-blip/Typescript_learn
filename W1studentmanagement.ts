@@ -56,15 +56,19 @@ wrapArray("hahaha");
 wrapArray(207);
 wrapArray(false);
 
-const findmax = (detail:(student[]):void => {
- let topave = average(detail.scores[0])
- let top = student.name[0]
- for(i=0; i<=detail.length; i++) {
-   const ave = average(detail.scores[i])
+const findmax = (detail:student[]):void => {
+ let topave = average(detail[0].scores)
+ let top = detail[0].name
+ for(let i=1; i<detail.length; i++) {
+   const ave = average(detail[i].scores)
    if(ave > topave) {
      topave = ave
-     top = student.name[i]
+     top = detail[i].name
    }
   }
  console.log("Top student is " + top + ".")
 }
+
+//CORRECTION
+(line62)
+use let i = 1, not i = 0
