@@ -11,17 +11,7 @@ interface CityReport {
   affectedArea?: string;
 }
 
-const c1: CityReport {
-  city: "Kulim", aqi: 110, quality: "Moderate", alert: AlertLevel.Yellow, isUnderWarning: false
-}
-const c2: CityReport {
-  city: "Sabah", aqi: 26, quality: "Good", alert: AlertLevel.Green, isUnderWarning: false
-}
-const c3: CityReport {
-  city: "KL", aqi: 301, quality: "Unhealthy", alert: AlertLevel.Orange, isUnderWarning:true, affectedArea: "PetalingJaya"
-}
-
-const getquality(data: CityReport): CityReport => {
+const getquality(data: number): string => {
   if(number.aqi > 200) {
     return "Hazardous"
   }
@@ -51,6 +41,16 @@ function getAlertLevel(quality: AirQuality): AlertLevel {
   }
 }
 
+const c1: CityReport {
+  city: "Kulim", aqi: 110, quality: getQuality(110), alert: getAlertLevel(getQuality(110)), isUnderWarning: false
+}
+const c2: CityReport {
+  city: "Sabah", aqi: 26, quality: getQuality(26), alert: getAlertLevel(getQuality(26)), isUnderWarning: false
+}
+const c3: CityReport {
+  city: "KL", aqi: 301, quality: getQuality(301), alert: getAlertLevel(getQuality(301)), isUnderWarning:true, affectedArea: "PetalingJaya"
+}
+
 function cityAlert(obj: CityReport): void {
   console.log("City: " + obj.city + " | AQI: " + obj.aqi + " | Quality: " + obj.quality + " | Alert: "+ obj.AlertLevel)
   if(obj.isUnderWarning === true) {
@@ -61,10 +61,18 @@ function cityAlert(obj: CityReport): void {
   }
 }
 
-const first<T>()
+const isArray: CityReport[] = CityReport[c1 ,c2, c3]
 
-8. first<T> and isEmpty<T> (generic arrow functions)
+const first = <T>(input: T[]): T => {
+	return input[0]
+}
 
-	•	first<T> — returns first item of any array
-	•	isEmpty<T> — returns true if array is empty
-	•	Call both with your city reports array
+const isEmpty = <T>(input: T[]): boolean => {
+	if(input === undefined) {
+		return true
+	}
+}
+
+console.log(first(isArray).city)
+console.log(isEmpty(isArray))
+console.log(isEmpty([]))
