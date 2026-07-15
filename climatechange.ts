@@ -52,7 +52,7 @@ const c3: CityReport = {
 }
 
 function cityAlert(obj: CityReport): void {
-  console.log("City: " + obj.city + " | AQI: " + obj.aqi + " | Quality: " + obj.quality + " | Alert: "+ obj.AlertLevel)
+  console.log("City: " + obj.city + " | AQI: " + obj.aqi + " | Quality: " + obj.quality + " | Alert: "+ obj.alert)
   if(obj.isUnderWarning === true) {
     console.warn("Aware to your mother Earth!")
   }
