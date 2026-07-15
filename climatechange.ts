@@ -1,4 +1,4 @@
-let AirQUality: "Good" | "Moderate" | "Unhealthy" | "Hazardous"
+type AirQuality: "Good" | "Moderate" | "Unhealthy" | "Hazardous"
 
 enum AlertLevel {Green, Yellow, Orange, Red}
 
@@ -11,14 +11,14 @@ interface CityReport {
   affectedArea?: string;
 }
 
-const getquality(data: number): string => {
-  if(number.aqi > 200) {
+const getquality = (data: number): string => {
+  if(data > 200) {
     return "Hazardous"
   }
-  else if(number.aqi > 100) {
+  else if(data > 100) {
     return "Unhealthy"
   }
-  else if(number.aqi > 50) {
+  else if(data > 50) {
     return "Moderate"
   }
   else {
@@ -33,21 +33,21 @@ function getAlertLevel(quality: AirQuality): AlertLevel {
   else if(quality === "Moderate") {
     return AlertLevel.Yellow
   }
-  else if(quality == "Unhealthy") {
-    return AlerLevel.Orange
+  else if(quality === "Unhealthy") {
+    return AlertLevel.Orange
   }
   else {
     return AlertLevel.Red
   }
 }
 
-const c1: CityReport {
+const c1: CityReport = {
   city: "Kulim", aqi: 110, quality: getQuality(110), alert: getAlertLevel(getQuality(110)), isUnderWarning: false
 }
-const c2: CityReport {
+const c2: CityReport = {
   city: "Sabah", aqi: 26, quality: getQuality(26), alert: getAlertLevel(getQuality(26)), isUnderWarning: false
 }
-const c3: CityReport {
+const c3: CityReport = {
   city: "KL", aqi: 301, quality: getQuality(301), alert: getAlertLevel(getQuality(301)), isUnderWarning:true, affectedArea: "PetalingJaya"
 }
 
@@ -61,7 +61,7 @@ function cityAlert(obj: CityReport): void {
   }
 }
 
-const isArray: CityReport[] = CityReport[c1 ,c2, c3]
+const isArray: CityReport[] = [c1 ,c2, c3]
 
 const first = <T>(input: T[]): T => {
 	return input[0]
@@ -72,6 +72,10 @@ const isEmpty = <T>(input: T[]): boolean => {
 		return true
 	}
 }
+
+console.log(cityAlert(c1))
+console.log(cityAlert(c2))
+console.log(cityAlert(c3))
 
 console.log(first(isArray).city)
 console.log(isEmpty(isArray))
