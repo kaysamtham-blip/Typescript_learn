@@ -68,14 +68,14 @@ const first = <T>(input: T[]): T => {
 }
 
 const isEmpty = <T>(input: T[]): boolean => {
-	if(input === undefined) {
+	if(input.length === 0) {
 		return true
 	}
 }
 
-console.log(cityAlert(c1))
-console.log(cityAlert(c2))
-console.log(cityAlert(c3))
+cityAlert(c1)
+cityAlert(c2)
+cityAlert(c3)
 
 console.log(first(isArray).city)
 console.log(isEmpty(isArray))
