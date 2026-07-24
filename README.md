@@ -6,15 +6,17 @@ These are the basic building blocks.
  ⁠string⁠: Text (e.g., ⁠"Hello"⁠).
  ⁠number⁠: Any number (integers or decimals).
  ⁠boolean⁠: ⁠true⁠ or ⁠false⁠.
- ⁠bigint⁠: Very large integers.
- ⁠symbol⁠: Unique identifiers.
- ⁠null⁠: Intentional empty value.
+ ⁠*bigint⁠: Very large integers.
+ ⁠*symbol⁠: Unique identifiers.
+ ⁠*null⁠: Intentional empty value.
  ⁠undefined⁠: The "default" state of nothingness.
+
 2. Object Types (The "Containers")
 These are all the things that hold more than one value, or have properties.
  Objects & Interfaces: (Like your ⁠Package⁠ and ⁠MaintenanceTask⁠).
  Arrays: ⁠string[]⁠ or ⁠number[]⁠ (they are a special type of object).
  Functions: ⁠(a: number) => number⁠.
+
 3. The "TypeScript Special" Types
 These are types that only exist in TypeScript to help you manage your code during development:
  ⁠any⁠: The "turn off safety" type (we discussed why this is dangerous).
@@ -91,3 +93,26 @@ Tuples: Arrays with a fixed number of items where each position has a specific t
  - if("trackingno" in item ) {..}
    const isPackage = item as Package；
    console.log(isPackage.item)
+
+24/7:
+- Promise use (resolve,reject)/(try,catch)
+ - function citydata(city:string)Promise<string> {
+   return new Promise((resolve. reject) => {
+    if(city === "") {reject("empty city!")}
+    else {resolve("data=120")} })
+- Promise[async,await] use (resolve,reject)/(try,catch)
+  async function citydata(city:string):Promise<string> {
+   try {   //use as resolve
+    console.log("...")}
+   catch(error) {
+    console.error(error)} }
+-API -- link to server for accessing data
+ - async function fetchdata(city:string) {
+    const a = await fetch("https//...");
+    cosnt b = await a.json();
+    console.log(b)
+- a.ok -- a is a valid data = 200 (code)
+ - if(! a.ok) {...}
+- setTimeout(() => {resolve(...)},1000) //not necessary to use, real app will take time automatically
+- throw new Error(error)  //throw: pop out msg when error happen; new Error(...): error msg + msg specifically tell you which line and under which function you get wrong
+- const cs = prompt("Enter age: ") //print to let (user enter input
