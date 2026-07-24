@@ -18,7 +18,7 @@ async function main(): Promise<void> {
   const quality = await fetchAirQuality("Alor Setar")
   const status = await fetchCityStatus("Alor Setar")
   console.log("Quality and status of Alor Setar is " + quality + " and " + status + ".")}
- catch {
+ catch(error) {
   console.error(error)}
 }
 
