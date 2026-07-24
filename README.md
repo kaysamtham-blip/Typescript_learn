@@ -116,3 +116,7 @@ Tuples: Arrays with a fixed number of items where each position has a specific t
 - setTimeout(() => {resolve(...)},1000) //not necessary to use, real app will take time automatically
 - throw new Error(error)  //throw: pop out msg when error happen; new Error(...): error msg + msg specifically tell you which line and under which function you get wrong
 - const cs = prompt("Enter age: ") //print to let (user enter input
+- JSON string -- raw words, not proper properties defined in Typescript
+- typed object -- proper properties convert from JSON string(raw text)
+- user input -- proper properties, can use directly and no need translation needed
+- data from server -- raw text, hv to convert to property through JSON(
