@@ -1,4 +1,4 @@
-type AirQuality: "Good" | "Moderate" | "Unhealthy" | "Hazardous"
+type AirQuality = "Good" | "Moderate" | "Unhealthy" | "Hazardous"
 
 enum AlertLevel {Green, Yellow, Orange, Red}
 
@@ -11,7 +11,7 @@ interface CityReport {
   affectedArea?: string;
 }
 
-const getquality = (data: number): string => {
+const getQuality = (data: number): AirQuality => {
   if(data > 200) {
     return "Hazardous"
   }
@@ -68,10 +68,8 @@ const first = <T>(input: T[]): T => {
 }
 
 const isEmpty = <T>(input: T[]): boolean => {
-	if(input.length === 0) {
-		return true
+  return input.length === 0
 	}
-}
 
 cityAlert(c1)
 cityAlert(c2)
