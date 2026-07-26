@@ -1,4 +1,4 @@
-type AirQuality : "Good" | "Moderate" | "Unhealthy" | "Hazardous"
+type AirQuality = "Good" | "Moderate" | "Unhealthy" | "Hazardous"
 
 enum AlertLevel {Green, Yellow, Orange, Red}
 
