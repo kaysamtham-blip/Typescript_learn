@@ -18,5 +18,9 @@ const obj: expense[] = [
 {name: "jasmine milk tea", amount: 12,date: "2026-05", category: "entertainment"}
 ]
 
-const list:expense():void => {
+const list = (a:expense):void => {
+ console.log(obj)
+ const choose = filter(a.category) {
+ 
+ }
 }
