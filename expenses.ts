@@ -21,10 +21,17 @@ const obj: expense[] = [
 
 const listall: string = console.log(obj)
 
-function list0 (m:expense[]): string[] {
- return obj
- const choose: string = m.filter((f)=>f.category=>"")
+function list0 (obj:expense[], month:string): void {
+ let sum = 0
+ const bymonth = prompt("Enter date:")
+ for(i=0; i<obj.length; i++) {
+  if(expense[i].date===bymonth) {
+   const sum = sum + expense[i].amount
+  }
+ }
+ console.log("Your expenses in " + bymonth + "is RM " + sum)
 }
+
 
 const list1 = (a:expense[]):void => {
  return obj
