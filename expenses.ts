@@ -4,7 +4,7 @@ interface expense {
 name: string;
 amount: number;
 isdeferred:boolean
-date: string format: "2025-09" //(year-month)
+date: string  //format: "2025-09" (year-month)
 category: cat;
 remark?: string;
 }
